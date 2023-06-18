@@ -25,14 +25,56 @@ class ViewController: UIViewController {
     @IBOutlet weak var circle3: UIImageView!
     @IBOutlet weak var circle4: UIImageView!
     
+    var circles = 0
+    let pincode = "1234"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    @IBAction func buttonTapped(_ sender: Any) {
+    @IBAction func buttonTapped(_ sender: UIButton) {
+          
+            guard circles < 4 else {
+                return
+            }
+          
+        circles += 1
         
-    }
-    
-
+            switch circles {
+            case 1:
+                circle1.image = UIImage(systemName: "circle.fill")
+            case 2:
+                circle2.image = UIImage(systemName: "circle.fill")
+            case 3:
+                circle3.image = UIImage(systemName: "circle.fill")
+            case 4:
+                circle4.image = UIImage(systemName: "circle.fill")
+          
+            default:
+                break
+            }
+        }
+    @IBAction func deleteButtonTapped(_ sender: UIButton) {
+       
+            guard circles > 0 else {
+                return
+            }
+            
+            circles -= 1
+        
+            switch circles {
+            case 0:
+                circle1.image = UIImage(systemName: "circle")
+            case 1:
+                circle2.image = UIImage(systemName: "circle")
+            case 2:
+                circle3.image = UIImage(systemName: "circle")
+            case 3:
+                circle4.image = UIImage(systemName: "circle")
+            default:
+                break
+            }
+        }
 }
 

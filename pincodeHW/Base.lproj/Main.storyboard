@@ -172,6 +172,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" image="delete.left" catalog="system"/>
                                                 <connections>
                                                     <action selector="buttonTapped:" destination="8Gg-bX-h6q" eventType="touchUpInside" id="t18-3H-nuF"/>
+                                                    <action selector="deleteButtonTapped:" destination="8Gg-bX-h6q" eventType="touchUpInside" id="DPb-cq-J2o"/>
                                                 </connections>
                                             </button>
                                         </subviews>
